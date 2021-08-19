@@ -4,7 +4,7 @@
         <title>Savana's Amazing Website</title>
         <style>
             body {
-                background: rgb(125, 198, 205);
+                background: goldenrod;
                 color: rgb(45, 45, 45);
                 padding: 10px;
                 font-family: arial;
@@ -16,10 +16,12 @@
         
             /* navigation menu */
             nav {
-                background: rgb(239, 80, 41);
+                background: darkolivegreen;
                 margin: 0 auto;
+                margin-bottom: 20px;
                 display: flex;
                 padding: 10px;
+                border-radius: 15px;
             }
             h1 {
                 display: flex;
@@ -42,7 +44,7 @@
         
             /* main container area beneath menu */
             main {
-                background: rgb(245, 238, 219);
+                background: khaki;
                 display: flex;
             }
             .sidebar {
@@ -51,13 +53,14 @@
             }
             .sidebar-img {
                 width: 200px;
+                border: 5px solid olive
             }
             .content {
                 flex: 1;
                 padding: 15px;
             }
             #interests {
-                border: 4px silver ridge;
+                border: 4px olive ridge;
                 padding: 8px;
             }
             h2, h3 {
@@ -83,16 +86,16 @@
     
             <main>
                 <!-- Sidebar section -->
-                <div>
-                    <img src=http://www.bbrmarketing.com/wp-content/uploads/2012/05/Polarizing-Kittens.jpg>
+                <div class="sidebar">
+                    <img class="sidebar-img" src=http://www.bbrmarketing.com/wp-content/uploads/2012/05/Polarizing-Kittens.jpg>
                 </div>
 
                 <!-- Content section -->
-                <div>
+                <div class="content">
                     <h2>Savana Hoots</h2>
                     <p>Student at Belle Chasse High School</p>   
                 <!-- Interests section -->
-                <div>
+                <div id="interests">
                     <h3>Interests</h3>
                     <ul>
                         <li>drawing</li>
