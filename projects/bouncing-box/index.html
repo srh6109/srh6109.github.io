@@ -9,8 +9,8 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
-			width: 150px;
-			height: 100px;
+			width: 200px;
+			height: 150px;
 			background-image: url("https://data.whicdn.com/images/294485393/original.gif");
 			font-size: 300%;
 			text-align: center;
@@ -21,6 +21,9 @@
 		}
 		.board{
 			height: 100vh;
+		}
+		.flip {
+			transform: scaleX(-1);
 		}
 		body {
 			background-image: url("https://image.freepik.com/free-vector/spring-landscape-scene_23-2148849825.jpg");
@@ -85,9 +88,11 @@
 				moveBoxTo(positionX);	
 				if (positionX > boardWidth) {
 					speed = -speed;
+					box.removeClass("flip");
 				}
 				if (positionX < 0) {
 					speed = -speed;
+					box.addClass("flip");
 				}
 
 			};
