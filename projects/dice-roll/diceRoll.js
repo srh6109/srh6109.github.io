@@ -26,7 +26,7 @@ function wagerAmountSet (){
             alert("Wager Too High");
         }
         else {
-            rollDice();
+            start = rollDice(start);
         }
     }
 }
@@ -50,9 +50,11 @@ function wagerAmountSet (){
 //If loss, subtract the bet amount from the total points
 
 
-function rollDice(){
+function rollDice(start){
   roll = Math.ceil(Math.random() * 6);
-  wager(start, bet, number, roll);
+  start = wager(start, bet, number, roll);
+  rewriteScreen(start);
+  return start;
 }
 
 function wager(start, bet, num, correctNum){
@@ -61,17 +63,18 @@ function wager(start, bet, num, correctNum){
   start = start + (bet*6);
   alert("You won! Now, you have a total of " + start + " points.");
   alert(start);
-  rewriteScreen(start);
+  return start;
   }
   else {
     start = start - bet;
     alert("You lost. Better luck next time. Now, you have a total of " + start + " points.");
     alert(start);
     rewriteScreen(start);
+    return start;
   }
 }
 
-function rewriteScreen(start) {
+function rewriteScreen() {
     checkBalanceEmpty();
     alert(start + "yeah");
     if (firstRun === true){
