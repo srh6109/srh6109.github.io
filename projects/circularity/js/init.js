@@ -22,6 +22,7 @@ var init = function (window) {
         // TODO 1 : Declare and initialize our variables
         var circle;
         var circles = [];
+        var numOfCircles = Number(prompt("How many circles do you want to display?"));
 
         // TODO 2 : Create a function that draws a circle 
         function drawCircle(){
@@ -32,7 +33,7 @@ var init = function (window) {
         }
 
         // TODO 3 / 8 : Call the drawCircle() function 
-        for (var loopsCompleted = 0; loopsCompleted < 100; loopsCompleted++) {
+        for (var loopsCompleted = 0; loopsCompleted < numOfCircles; loopsCompleted++) {
             drawCircle();
         }
 
